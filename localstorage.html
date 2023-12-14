@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // localStorage.setItem("myfullname","bonakurthisowmyasri")
+    // console.log(localStorage.getItem("name"))
+    // above tjis are to creat the localstorage values
+
+    // now below we are creating the delete the localstorage
+    localStorage.removeItem("name")
+    localStorage.removeItem("myfullname")
+
+
+
+//  the local storage concept
+// the localstorage can write in stings only
+// the localstorage cannot write in boolen , objects,arrays
+// we can assign the integers into a string
+
+let number = 12;
+localStorage.setItem('numbers', number)
+console.log(typeof(localStorage.getItem('numbers')))
+
+
+// now below we are using the the json methond for to store the values of array numbers in the form of strings ,thats we we have to use array of objects in this method
+let note={
+ title:' note title',
+ content:'creat content'
+}
+localStorage.setItem('notevalue',JSON.stringify(note))
+console.log(JSON.stringify(note))
+
+
+console.log(JSON.parse(localStorage.getItem('notevalues')))
+
+// 39---NOW HERE THE JSON.STRINGIFY IS TO CHANGE THE ABJECTS INTO STRINGS THATS WHE WE HAVE TO US IT
+// 43---THE JSON .PRASE IS UE TO CHANGE THE SIRING AN OBJECTS CHANGE TO OBJECTS
+
+
+localStorage.clear()
+
+// 49---- the localStorage.clear() to clear the all the key:values in the local storage data and it clear every thing in localstorage
+
+
+
+</script>
